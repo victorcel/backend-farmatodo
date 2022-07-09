@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Map;
+import java.util.Objects;
 
 @Service
 public class EpisodeService {
@@ -19,12 +20,12 @@ public class EpisodeService {
     @Value("${url.episodio}")
     private String url_episodio;
 
-    public ResponseEntity<Map<String, Object>> getEpisode(int Id) {
+    public ResponseEntity<Map<String, Object>> getEpisode(String Id) {
         try {
             final String uri = url_episodio + Id;
             RestTemplate restTemplate = new RestTemplate();
             Episode result = restTemplate.getForObject(uri, Episode.class);
-            return ResponseEntity.status(HttpStatus.OK).body(result != null ? result.toJson() : null);
+            return ResponseEntity.status(HttpStatus.OK).body(Objects.requireNonNull(result).toJson());
         } catch (Exception exception) {
             logger.error(exception.getMessage());
             return ResponseEntity.status(HttpStatus.FOUND).body(Map.of("error", exception.getMessage()));

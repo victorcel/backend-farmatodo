@@ -22,6 +22,6 @@ public class EpisodeController {
     @GetMapping(path = "/{param}")
 
     public ResponseEntity<Map<String, Object>> getEpisode(@PathVariable("param") String param) {
-        return episodeService.getEpisode(Integer.parseInt(param));
+        return episodeService.getEpisode(param);
     }
 }
