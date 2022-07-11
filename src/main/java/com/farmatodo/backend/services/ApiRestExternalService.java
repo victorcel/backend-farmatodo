@@ -1,5 +1,6 @@
 package com.farmatodo.backend.services;
 
+import com.farmatodo.backend.entity.Character;
 import com.farmatodo.backend.entity.Episode;
 import com.farmatodo.backend.entity.Location;
 import org.slf4j.Logger;
@@ -24,8 +25,9 @@ public class ApiRestExternalService {
 
     private RestTemplate restTemplate;
 
-    public Episode getEpisode(Long id) throws Exception {
+    public Episode getEpisode(String id) throws Exception {
         String url = URL_HOST + URL_EPISODE + id;
+
         return restTemplate.getForObject(url, Episode.class);
     }
 

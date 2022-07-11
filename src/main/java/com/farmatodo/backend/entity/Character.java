@@ -14,7 +14,7 @@ import javax.persistence.Table;
 import java.util.Set;
 
 @Entity
-@Table(name="character", schema = "db-farmatodo")
+@Table(name="character", schema = "restapi-farmatodo")
 public class Character {
 
     @Id

@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Set;
 
 @Entity
-@Table(name = "episode", schema = "db-farmatodo")
+@Table(name = "episode", schema = "restapi-farmatodo")
 public class Episode {
 
     @Id
@@ -16,7 +16,7 @@ public class Episode {
     private String name;
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    @JoinTable(name = "episode_character", schema = "db", joinColumns = {
+    @JoinTable(name = "episode_character", schema = "restapi-farmatodo", joinColumns = {
             @JoinColumn(name = "episode_id")},
             inverseJoinColumns = {
                     @JoinColumn(name = "character_id")
