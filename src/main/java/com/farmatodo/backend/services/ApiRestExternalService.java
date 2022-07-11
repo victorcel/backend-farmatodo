@@ -13,9 +13,9 @@ import org.springframework.web.client.RestTemplate;
 import java.util.List;
 
 @Service
-public class ApiRestService {
+public class ApiRestExternalService {
 
-    private final static Logger logger = LoggerFactory.getLogger(ApiRestService.class);
+    private final static Logger logger = LoggerFactory.getLogger(ApiRestExternalService.class);
 
     private static final String URL_HOST = "https://rickandmortyapi.com";
     private static final String URL_EPISODE = "/api/episode/";
