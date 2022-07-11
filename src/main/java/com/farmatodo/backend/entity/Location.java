@@ -9,7 +9,7 @@ import javax.persistence.Table;
 import java.util.Set;
 
 @Entity
-@Table(name="location", schema = "db-farmatodo")
+@Table(name="location", schema = "restapi-farmatodo")
 public class Location {
 
     @Id
@@ -24,6 +24,9 @@ public class Location {
 
     @Column(name="dimension", nullable = false, length = 250)
     private String dimension;
+
+    @Column(name = "url", nullable = false,length = 150)
+    private String url;
 
     @OneToMany(mappedBy = "location", cascade = CascadeType.ALL)
     private Set<Character> characters;
@@ -58,6 +61,14 @@ public class Location {
 
     public void setDimension(String dimension) {
         this.dimension = dimension;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public Set<Character> getCharacters() {
