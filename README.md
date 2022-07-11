@@ -16,7 +16,7 @@ Para ejecutar este proyecto en local tenga las siguientes consideraciones:
 
 Esta API se puede ejecutar y consumir de forma local, y también se puede consumir de forma global, está desplegada sobre la plataforma de servicio en la nube Heroku.
 
-Base url local: http://localhost:9090/api
+Base url local: http://localhost:8080/api
 
 + Episode
     + Puede obtener la información de un episodio de rick and morty utilizando el endpoint /episodio/{id}, donde el **id** es el episodio a consultar.   
@@ -24,7 +24,7 @@ Base url local: http://localhost:9090/api
 
 + Happy Number
     + Puede consultar si un número es feliz o no usando el endpoint /happynumber/{numbers}, donde **numbers** es una lista de números a consultar separados por coma.   
-      Ejemplo de consumo local:  http://localhost:9090/api/happynumber/33,331,123
+      Ejemplo de consumo local:  http://localhost:8080/api/happynumber/33,331,123
 
 + Summation
     + Puede calcular el resultado de la suma de números naturales hasta N usando el endpoint /summation/{number}, donde **number** es el número a calcular.   
