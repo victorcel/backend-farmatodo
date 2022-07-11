@@ -28,4 +28,4 @@ Base url local: http://localhost:9090/api
 
 + Summation
     + Puede calcular el resultado de la suma de números naturales hasta N usando el endpoint /summation/{number}, donde **number** es el número a calcular.   
-      Ejemplo de consumo local:  http://localhost:9090/api/summation/5  
+      Ejemplo de consumo local:  http://localhost:8080/api/summation/5  
